@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+
+<robot
+  name="communication_module_with_antenna">
+  <!--gazebo reference="communication_module_with_antenna">
+    <material name="Red">
+      <color rgba="1 0 0 1"/>
+    </material>
+  </gazebo-->
+  <!-- <gazebo reference="communication_module_with_antenna">
+    <script>
+      <uri>package://communication_module_with_antenna/materials/repeated.material</uri>
+      <name>RepeatedTexture</name>
+    </script>
+  </gazebo> -->
+
+  <link
+    name="communication_module_with_antenna">
+    <inertial>
+      <origin
+        xyz="-2.506E-17 1.8397E-17 4.7957E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.35324" />
+      <inertia
+        ixx="0.012159"
+        ixy="-9.6779E-05"
+        ixz="2.76111910841712E-20"
+        iyy="0.012161"
+        iyz="-7.0539699945927E-19"
+        izz="0.00039152" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://communication_module_with_antenna/meshes/communication_module_with_antenna.STL" />
+      </geometry>
+      <material
+        name="module">
+        <color
+          rgba="1 0 0 1" />
+          <lighting>1</lighting>
+          <!-- <script>
+            <uri>package://communication_module_with_antenna/materials/repeated.material</uri>
+            <name>RepeatedTexture</name>
+          </script> -->
+          <!--shader type='pixel'>
+            <normal_map>__default__</normal_map>
+          </shader>
+          <ambient>0 0.7 0.7 1</ambient>
+          <diffuse>0 0.7 0.7 1</diffuse>
+          <specular>0 0.7 0.7 1</specular>
+          <emissive>0 0 0 1</emissive-->
+        <!--texture
+          filename="package://communication_module_with_antenna/textures/" /-->
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5707963267949 0 0" />
+      <geometry>
+        <mesh
+          filename="package://communication_module_with_antenna/meshes/communication_module_with_antenna.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

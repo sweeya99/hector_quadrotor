@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+
+<robot
+  name="mast">
+  <gazebo reference="base_link">
+    <material>Gazebo/White</material>
+  </gazebo>
+
+  <gazebo reference="antenna">
+    <material>Gazebo/White</material>
+  </gazebo>
+
+  <gazebo reference="text_board">
+    <material>Gazebo/SkyBlue</material>
+  </gazebo>
+
+  <gazebo reference="module">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  <link
+    name="base_link">
+    <inertial>
+      <!--origin
+        xyz="1.57231279445662 1.16826490935591 1.0142456618496"
+        rpy="0 0 0" /-->
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="65.5165337831978" />
+      <inertia
+        ixx="26.7646926377253"
+        ixy="1.41755552395388E-15"
+        ixz="1.03856046916512E-15"
+        iyy="26.660422011733156"
+        iyz="0.00670710881987373"
+        izz="26.8926403606603" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mast/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mast/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="text_board">
+    <inertial>
+      <origin
+        xyz="-6.88338275267597E-15 0 0.00127000000001165"
+        rpy="0 0 0" />
+      <mass
+        value="0.198283474399999" />
+      <inertia
+        ixx="0.00129001264777298"
+        ixy="3.98191418820427E-19"
+        ixz="-2.32763673216149E-35"
+        iyy="0.00129001264777298"
+        iyz="1.36369182639754E-21"
+        izz="0.00257981208793538" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mast/meshes/text_board.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mast/meshes/text_board.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="text_board_joint"
+    type="fixed">
+    <origin
+      xyz="1.5723 -0.93868 1.2601"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="text_board" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="module_holder">
+    <inertial>
+      <origin
+        xyz="-1.11022302462516E-15 -4.44089209850063E-16 0.0197263635737698"
+        rpy="0 0 0" />
+      <mass
+        value="0.11214039511857" />
+      <inertia
+        ixx="9.70687893984366E-05"
+        ixy="9.26413928290601E-21"
+        ixz="2.03837798305907E-18"
+        iyy="7.06380938728365E-05"
+        iyz="8.33731470496252E-19"
+        izz="7.12797207192067E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mast/meshes/module_holder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mast/meshes/module_holder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="module_holder_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="text_board" />
+    <child
+      link="module_holder" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="module">
+    <inertial>
+      <origin
+        xyz="-4.37322122751604E-05 0 -4.37322122752715E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.210240234105137" />
+      <inertia
+        ixx="0.000144964399274192"
+        ixy="-1.76929758895263E-19"
+        ixz="7.69893142388258E-06"
+        iyy="0.000210860549972284"
+        iyz="8.2443061928399E-20"
+        izz="0.00016320845177539" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mast/meshes/module.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mast/meshes/module.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="module_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0635"
+      rpy="1.5708 1.5708 0" />
+    <parent
+      link="module_holder" />
+    <child
+      link="module" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="antenna">
+    <inertial>
+      <origin
+        xyz="-0.00127000000036226 0.444499999999976 0.00127000000041344"
+        rpy="0 0 0" />
+      <mass
+        value="0.146772870770587" />
+      <inertia
+        ixx="0.0123105530910958"
+        ixy="3.60244187229331E-19"
+        ixz="-9.11310607191615E-05"
+        iyy="0.000183971311773103"
+        iyz="-8.47718654911363E-17"
+        izz="0.0123105530910904" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mast/meshes/antenna.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mast/meshes/antenna.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="antenna_joint"
+    type="fixed">
+    <origin
+      xyz="-3.8441E-05 -0.45312 0.00011044"
+      rpy="0 1.5694 0" />
+    <parent
+      link="module" />
+    <child
+      link="antenna" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
